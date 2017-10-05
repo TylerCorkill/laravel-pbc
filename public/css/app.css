@@ -5,3 +5,17 @@
 ng-map {
   height: 500px;
 }
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form > div {
+  display: flex;
+  margin: 20px;
+}
+
+form > div > p {
+  margin-right: 5px;
+}?
