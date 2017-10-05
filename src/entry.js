@@ -1,10 +1,11 @@
 import angular from 'angular';
-import map from './directives/map.js';
-// import layoutCtrl from './controllers/map.js';
+import inputForm from './directives/inputForm.js';
+import mapCtrl from './controllers/mapCtrl.js';
+import ngMap from 'ngmap';
 
-angular.module('app', [])
+angular.module('app', ['ngMap'])
     .config(function(){
 
     })
-    .directive('map', map);
-    // .controller('appCtrl', layoutCtrl);
+    .directive('inputForm', inputForm)
+    .controller('mapCtrl', mapCtrl);
