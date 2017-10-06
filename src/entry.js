@@ -1,11 +1,25 @@
 import angular from 'angular';
+import ngMap from 'ngmap';
 import inputForm from './directives/inputForm.js';
 import mapCtrl from './controllers/mapCtrl.js';
-import ngMap from 'ngmap';
+import getRoutes from './services/getRoutes.js';
 
 angular.module('app', ['ngMap'])
     .config(function(){
 
     })
+    .service('getRoutes', getRoutes)
+    .controller('mapCtrl', mapCtrl)
     .directive('inputForm', inputForm)
-    .controller('mapCtrl', mapCtrl);
+    .run(function ($rootScope, getRoutes) {
+        $rootScope.getRoutes = getRoutes;
+    });
+
+
+
+// run.$inject = ['$rootScope', 'getRoutes'];
+
+// function run($rootScope, getRoutes) {
+//
+//
+// }

@@ -19,12 +19,12 @@ Route::get('/', function () {
 });
 
 Route::get('/api/migration/{year}/{aou}', function($year, $aou) {
-    $routes = DB::select('select * from fifty where year = ' . $year . ' AND AOU = ' . $aou);
+    $routes = DB::select('select routes.longitude, routes.latitude, fifty.AOU from fifty, routes where fifty.year = '.$year.' AND fifty.AOU = '.$aou.' AND fifty.Route = routes.Route');
     return response($routes, 200);
 });
 
-Route::get('/api/route/{route}', function($route) {
-    $routes = DB::select('select * from routes where route = ' . $route);
+Route::get('/api/route', function() {
+    $routes = DB::select('select * from routes');
     return response($routes, 200);
 });
 
