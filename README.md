@@ -1,5 +1,5 @@
 # laravel-pbc
-```sh```
+```sh
 npm install
 npm run laravel
-```sh```
+```
