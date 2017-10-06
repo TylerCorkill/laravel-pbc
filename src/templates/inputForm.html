@@ -1,10 +1,13 @@
 <form>
     <div>
         <p>Year:</p>
-        <input type="text">
+        <input ng-model="year" type="text">
     </div>
     <div>
         <p>Species:</p>
-        <input type="text">
+        <input ng-model="species" type="text">
+    </div>
+    <div>
+        <button ng-click="ctrl.changePoints(year, species)"></button>
     </div>
 </form>

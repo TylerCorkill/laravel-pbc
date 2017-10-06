@@ -8,21 +8,13 @@
 </head>
 <body>
     <div ng-app="app">
-        <div ng-controller="mapCtrl as vm">
-            <ng-map center="USA" zoom="4">
-                <shape name="circle" ng-repeat="point in vm.locations" no-watcher="true"
-                       stroke-color="#FF0000"
-                       stroke-opacity="0.8"
-                       stroke-weight="0"
-                       fill-color="#FF0000"
-                       fill-opacity="0.35"
-                       center="{{[point.latitude, point.longitude]}}"
-                       radius="10000">
-                </shape>
-            </ng-map>
-        </div>
-        <input-form></input-form>
+        <main-body>
+            wrong
+
+        </main-body>
+
     </div>
+
     <script src="js/app.js"></script>
 </body>
 </html>

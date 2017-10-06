@@ -1,12 +1,12 @@
 export default function map() {
     return {
         scope: {
-            changePoints: '<'
+            locations: '<'
         },
         restrict: 'E',
-        controller: 'formCtrl',
+        controller: 'mapCtrl',
         controllerAs: 'ctrl',
         bindToController: true,
-        template: require('../templates/inputForm.html')
+        template: require('../templates/map.html')
     }
 }

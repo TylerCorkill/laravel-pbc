@@ -7,12 +7,10 @@ export default function getRoutes($http) {
             callback(res);
         })
     };
-    this.migration = function(year, aou, callback) {
-        $http({
+    this.migration = function(year, aou) {
+        return $http({
             method: 'GET',
             url: `/api/migration/${year}/${aou}`
-        }).then((res) => {
-            callback(res);
-        })
+        });
     }
 }
