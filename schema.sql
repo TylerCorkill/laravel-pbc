@@ -81,8 +81,21 @@ CREATE TABLE IF NOT EXISTS `routes` (
   `RouteTypeDetailID` tinyint(4) DEFAULT NULL
 );
 
+CREATE TABLE IF NOT EXISTS `species` (
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `AOU` int(11) DEFAULT NULL,
+  `en_name` char(100) DEFAULT NULL,
+  `fr_name` char(100) DEFAULT NULL,
+  `es_name` char(100) DEFAULT NULL,
+  `order` char(100) DEFAULT NULL,
+  `family` char(100) DEFAULT NULL,
+  `genus` char(100) DEFAULT NULL,
+  `species` char(100) DEFAULT NULL
+);
+
 
 
 
 ALTER TABLE `routes_join` ADD FOREIGN KEY (`route_id`) REFERENCES `routes` (`id`);
 ALTER TABLE `routes_join` ADD FOREIGN KEY (`fifty_id`) REFERENCES `fifty` (`id`);
+ALTER TABLE `fifty` ADD FOREIGN KEY (`AOU`) REFERENCES `species` (`AOU`);
