@@ -12,3 +12,5 @@ yarn-error.log
 .env
 /public/js/app.js
 /public/js/vendor.js
+.DS_Store
+/storage/debugbar

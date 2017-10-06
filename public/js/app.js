@@ -33973,9 +33973,9 @@ $provide.value("$locale", {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_inputForm_js__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__controllers_mapCtrl_js__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngmap__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_inputForm_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__controllers_mapCtrl_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngmap__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngmap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ngmap__);
 
 
@@ -33985,11 +33985,36 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 __WEBPACK_IMPORTED_MODULE_0_angular___default.a.module('app', ['ngMap']).config(function () {}).directive('inputForm', __WEBPACK_IMPORTED_MODULE_1__directives_inputForm_js__["a" /* default */]).controller('mapCtrl', __WEBPACK_IMPORTED_MODULE_2__controllers_mapCtrl_js__["a" /* default */]);
 
 /***/ }),
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = map;
+function map() {
+    return {
+        template: __webpack_require__(4)
+    };
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = "<form>\n    <div>\n        <p>Year:</p>\n        <input type=\"text\">\n    </div>\n    <div>\n        <p>Species:</p>\n        <input type=\"text\">\n    </div>\n</form>";
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = mapCtrl;
+function mapCtrl() {
+    var vm = this;
+    vm.locations = [[47.01855, -63.99116], [34.5662622, -94.7071599], [43.2540347, -70.6441649], [29.6873267, -89.9627919], [49.17711, -101.84405]];
+}
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function(root, factory) {
@@ -37441,35 +37466,6 @@ angular.module('ngMap', []);
 
 return 'ngMap';
 }));
-
-/***/ }),
-/* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = map;
-function map() {
-    return {
-        template: __webpack_require__(9)
-    };
-}
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports) {
-
-module.exports = "<form>\n    <div>\n        <p>Year:</p>\n        <input type=\"text\">\n    </div>\n\n    <div>\n        <p>Species:</p>\n        <input type=\"text\">\n    </div>\n</form>";
-
-/***/ }),
-/* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = mapCtrl;
-function mapCtrl() {
-    var vm = this;
-    vm.locations = [[47.01855, -63.99116], [34.5662622, -94.7071599], [43.2540347, -70.6441649], [29.6873267, -89.9627919], [49.17711, -101.84405]];
-}
 
 /***/ })
 /******/ ]);

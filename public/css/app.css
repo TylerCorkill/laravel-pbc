@@ -3,7 +3,7 @@
 }
 
 ng-map {
-  height: 500px;
+  height: 400px;
 }
 
 form {
@@ -18,4 +18,4 @@ form > div {
 
 form > div > p {
   margin-right: 5px;
-}?
+}
