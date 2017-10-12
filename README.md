@@ -12,3 +12,6 @@ npm install
 npm run unzip
 npm run laravel
 ```
+## Requirements
+Laravel
+Composer
