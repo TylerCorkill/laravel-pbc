@@ -1,6 +1,8 @@
 {
     "private": true,
     "scripts": {
+        "unzip": "for f in public/geojson/*; do unzip -o \"$f\" -d public/geojson; done; npm run remove-zips",
+        "remove-zips": "rm -rf public/geojson/*.zip",
         "laravel": "npm run watch & php artisan serve",
         "schema": "mysql -u root birds < 'schema.sql'",
         "dev": "npm run development",
