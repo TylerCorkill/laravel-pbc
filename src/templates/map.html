@@ -9,5 +9,9 @@
                center="{{[point.latitude, point.longitude]}}"
                radius="10000">
         </shape>
+        <map-data set-style="{{ctrl.styleFunc()}}"
+                load-geo-json="/geojson/blank.json">
+        </map-data>
     </ng-map>
+    <!--<p>{{ctrl.map}}</p>-->
 </div>

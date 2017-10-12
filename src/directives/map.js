@@ -1,7 +1,9 @@
 export default function map() {
     return {
         scope: {
-            locations: '<'
+            locations: '<',
+            year: '<',
+            show: '<'
         },
         restrict: 'E',
         controller: 'mapCtrl',
