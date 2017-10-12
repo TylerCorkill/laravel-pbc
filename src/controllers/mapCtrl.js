@@ -1,3 +1,3 @@
-export default function mapCtrl(NgMap) {
+export default function mapCtrl() {
 
 }
