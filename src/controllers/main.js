@@ -7,10 +7,8 @@ export default function mainCtrl(getRoutes, NgMap) {
         console.log(map);
     });
 
-
-
     vm.changePoints = function(year, species) {
-        if (year <= 2009 && year >= 2001) {
+        if (year <= 2010 && year >= 2001) {
             vm.map.data.forEach(function(feature) {
                 vm.map.data.remove(feature);
             });
