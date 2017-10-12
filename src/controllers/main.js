@@ -1,4 +1,4 @@
-export default function mainCtrl(getRoutes, NgMap) {
+export default function mainCtrl(getData, NgMap) {
     var vm = this;
     vm.locations = [];
 
@@ -13,13 +13,26 @@ export default function mainCtrl(getRoutes, NgMap) {
                 vm.map.data.remove(feature);
             });
 
+
             if (Number.isInteger(+year)) {
                 vm.map.data.loadGeoJson('/geojson/' + year + '.json');
             }
 
-            getRoutes.migration(year, species).then(function(res) {
-                vm.locations = res.data;
-            });
+
+            if (Number.isInteger(+species)) {
+                getData.bbs(year, species).then(function(res) {
+                    vm.locations = res.data;
+                });
+            } else {
+                getData.aou(species).then(function(res) {
+                    if (res.data.length) {
+                        getData.bbs(year, res.data[0].AOU).then(function(res) {
+                            vm.locations = res.data;
+                        });
+                    }
+                });
+            }
+
         } else {
             console.error('YEAR OUT OF RANGE (should be 2001-2009');
         }

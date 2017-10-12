@@ -6,13 +6,13 @@ import mapDir from './directives/map.js';
 import mapCtrl from './controllers/mapCtrl.js';
 import formDir from './directives/inputForm.js';
 import formCtrl from './directives/inputForm.js';
-import getRoutes from './services/getRoutes.js';
+import getData from './services/getData.js';
 
 angular.module('app', ['ngMap'])
     .config(function() {
 
     })
-    .service('getRoutes', getRoutes)
+    .service('getData', getData)
 
     .directive('mainBody', mainDir).controller('mainCtrl', mainCtrl)
 
@@ -20,15 +20,6 @@ angular.module('app', ['ngMap'])
 
     .directive('inputForm', formDir).controller('formCtrl', formCtrl)
 
-    .run(function ($rootScope, getRoutes) {
-        $rootScope.getRoutes = getRoutes;
+    .run(function ($rootScope, getData) {
+        $rootScope.getData = getData;
     });
-
-
-
-// run.$inject = ['$rootScope', 'getRoutes'];
-
-// function run($rootScope, getRoutes) {
-//
-//
-// }
