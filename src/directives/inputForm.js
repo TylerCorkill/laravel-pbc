@@ -1,7 +1,8 @@
 export default function map() {
     return {
         scope: {
-            changePoints: '<'
+            changePoints: '<',
+            changeJson: '<'
         },
         restrict: 'E',
         controller: 'formCtrl',
