@@ -17,4 +17,5 @@ npm run laravel
 Laravel
 Composer
 PHP
+Node.js
 ```
