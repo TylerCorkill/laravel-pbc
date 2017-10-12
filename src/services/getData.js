@@ -8,7 +8,6 @@ export default function getData($http) {
 
     this.aou = function(name) {
         name = name.split(' ').join('_');
-        console.log(`/api/name/${name}`);
         return $http({
             method: 'GET',
             url: `/api/name/${name}`
